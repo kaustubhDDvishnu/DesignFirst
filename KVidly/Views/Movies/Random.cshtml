@@ -1,0 +1,36 @@
+﻿@model KVidly.ViewModels.RandomMovieViewModel
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    var className = Model.Customers.Count > 0 ? "popular" : "Null";
+ }
+
+@*
+THIS IS COMMENT AT MULTIPLE LINES    
+
+*@
+<h2 class="@className">@Model.Movie.Name</h2>
+
+@if (Model.Customers.Count == 0)
+{
+    <p>Noone has rented this movie before..!!</p>
+}
+else
+{
+    <ul>
+        @foreach (var customers in Model.Customers)
+        {
+            <li>
+                @customers.Name
+            </li>
+        }
+
+        
+
+    </ul>
+}
+
+    <h2>1.add model with properties 2.add controller with creating object of model 3. add reference of model and render model properies.</h2>
