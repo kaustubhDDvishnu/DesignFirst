@@ -15,7 +15,7 @@ namespace KVidly
 
             routes.MapMvcAttributeRoutes();
 
-            
+            //,k;km;m
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
